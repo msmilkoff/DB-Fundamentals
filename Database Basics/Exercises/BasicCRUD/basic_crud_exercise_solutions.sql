@@ -129,7 +129,9 @@ ORDER  BY CountryName
 
 -- Part III - Queries for Diablo Database
 -- Problem 25 (Last)
-
+SELECT Name 
+FROM Characters 
+ORDER BY Name 
 
 
 
