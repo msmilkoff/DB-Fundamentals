@@ -132,11 +132,3 @@ ORDER  BY CountryName
 SELECT Name 
 FROM Characters 
 ORDER BY Name 
-
-
-
-
-
-
-
-
