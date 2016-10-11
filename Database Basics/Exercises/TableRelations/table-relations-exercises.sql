@@ -380,30 +380,64 @@ SELECT TOP 5
  ORDER BY c.CountryName
   
   -- Problem 18
-  
+  SELECT c_rank.ContinentCode,
+       c_rank.CurrencyCode,
+	   c_rank.CurrencyUsage
+  FROM
+	(SELECT c.ContinentCode,
+            c.CurrencyCode,
+    	    COUNT(c.CurrencyCode) AS CurrencyUsage,
+    	    DENSE_RANK() OVER 
+		     (PARTITION BY c.ContinentCode ORDER BY COUNT(c.CurrencyCode) DESC) AS CurrencyRank
+      FROM Countries AS c
+      GROUP BY c.ContinentCode, c.CurrencyCode) AS c_rank
+ WHERE c_rank.CurrencyRank = 1
+   AND c_rank.CurrencyUsage > 1
   
   -- Problem 19
+  SELECT COUNT(c.CountryCode) AS CountryCode
+  FROM Countries AS c
+  LEFT JOIN MountainsCountries AS mc
+    ON c.CountryCode = mc.CountryCode
+ WHERE mc.CountryCode IS NULL
+  
   -- Problem 20
+  SELECT TOP 5
+       c.CountryName,
+       MAX(p.Elevation) AS HighestPeakElevation,
+       MAX(r.Length) AS LongestRiverLength
+  FROM Countries AS c
+  LEFT JOIN CountriesRivers AS cr
+    ON c.CountryCode = cr.CountryCode
+  LEFT JOIN Rivers AS r
+    ON cr.RiverId = r.Id
+  LEFT JOIN MountainsCountries AS mc
+    ON c.CountryCode = mc.CountryCode
+  LEFT JOIN Peaks AS p
+    ON mc.MountainId = p.MountainId
+ GROUP BY c.CountryName
+ ORDER BY HighestPeakElevation DESC,
+          LongestRiverLength DESC,
+		  c.CountryName ASC
+  
   -- Problem 21
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  SELECT TOP 5
+       sq_joins.CountryName,
+       ISNULL(sq_joins.PeakName, '(no highest peak)'),
+       ISNULL(MAX(sq_joins.Elevation), 0) AS HighestPeakElevetion,
+       ISNULL(sq_joins.MountainRange, '(no mountain)')
+  FROM
+      (SELECT c.CountryName,
+      	   p.PeakName,
+             p.Elevation,
+      	   m.MountainRange
+        FROM Countries AS c
+        LEFT JOIN MountainsCountries AS mc
+          ON c.CountryCode = mc.CountryCode
+        LEFT JOIN Peaks AS p
+          ON mc.MountainId = p.MountainId
+        LEFT JOIN Mountains AS m
+          ON mc.MountainId = m.Id) AS sq_joins
+  GROUP BY sq_joins.CountryName, sq_joins.PeakName, sq_joins.MountainRange
+  ORDER BY sq_joins.CountryName, sq_joins.PeakName
+          
