@@ -1,0 +1,6 @@
+C:\Trash\IntroToAdoNet\02.GetVillainsNames\bin\Debug\02.GetVillainsNames.exe.config
+C:\Trash\IntroToAdoNet\02.GetVillainsNames\bin\Debug\02.GetVillainsNames.exe
+C:\Trash\IntroToAdoNet\02.GetVillainsNames\bin\Debug\02.GetVillainsNames.pdb
+C:\Trash\IntroToAdoNet\02.GetVillainsNames\obj\Debug\02.GetVillainsNames.csprojResolveAssemblyReference.cache
+C:\Trash\IntroToAdoNet\02.GetVillainsNames\obj\Debug\02.GetVillainsNames.exe
+C:\Trash\IntroToAdoNet\02.GetVillainsNames\obj\Debug\02.GetVillainsNames.pdb

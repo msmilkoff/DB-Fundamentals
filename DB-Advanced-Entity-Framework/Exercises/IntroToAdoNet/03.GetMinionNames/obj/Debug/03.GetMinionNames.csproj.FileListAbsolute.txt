@@ -1,0 +1,6 @@
+C:\Trash\IntroToAdoNet\03.GetMinionNames\bin\Debug\03.GetMinionNames.exe.config
+C:\Trash\IntroToAdoNet\03.GetMinionNames\bin\Debug\03.GetMinionNames.exe
+C:\Trash\IntroToAdoNet\03.GetMinionNames\bin\Debug\03.GetMinionNames.pdb
+C:\Trash\IntroToAdoNet\03.GetMinionNames\obj\Debug\03.GetMinionNames.csprojResolveAssemblyReference.cache
+C:\Trash\IntroToAdoNet\03.GetMinionNames\obj\Debug\03.GetMinionNames.exe
+C:\Trash\IntroToAdoNet\03.GetMinionNames\obj\Debug\03.GetMinionNames.pdb
