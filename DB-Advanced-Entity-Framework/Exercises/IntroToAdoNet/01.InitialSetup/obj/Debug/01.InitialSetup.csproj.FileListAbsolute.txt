@@ -1,9 +1,0 @@
-C:\Trash\IntroToAdoNet\01.InitialSetup\bin\Debug\01.InitialSetup.exe.config
-C:\Trash\IntroToAdoNet\01.InitialSetup\bin\Debug\01.InitialSetup.exe
-C:\Trash\IntroToAdoNet\01.InitialSetup\bin\Debug\01.InitialSetup.pdb
-C:\Trash\IntroToAdoNet\01.InitialSetup\obj\Debug\01.InitialSetup.csprojResolveAssemblyReference.cache
-C:\Trash\IntroToAdoNet\01.InitialSetup\obj\Debug\01.InitialSetup.exe
-C:\Trash\IntroToAdoNet\01.InitialSetup\obj\Debug\01.InitialSetup.pdb
-C:\SoftUni\DB Fundamentals\DB-Advanced-Entity-Framework\Exercises\IntroToAdoNet\01.InitialSetup\bin\Debug\01.InitialSetup.exe.config
-C:\SoftUni\DB Fundamentals\DB-Advanced-Entity-Framework\Exercises\IntroToAdoNet\01.InitialSetup\obj\Debug\01.InitialSetup.exe
-C:\SoftUni\DB Fundamentals\DB-Advanced-Entity-Framework\Exercises\IntroToAdoNet\01.InitialSetup\obj\Debug\01.InitialSetup.pdb
