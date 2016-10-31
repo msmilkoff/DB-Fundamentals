@@ -1,6 +1,8 @@
 ﻿namespace _09.DepartmentsWithMoreThan5Employees
 {
     using System;
+    using System.Collections.Generic;
+    using System.Diagnostics;
     using System.Linq;
     using Data;
 
@@ -10,21 +12,27 @@
         {
             var db = new SoftuniContext();
 
-            using (db)
-            {
-                var departments = db.Departments
-                    .Where(d => d.Employees.Count > 5)
-                    .OrderBy(d => d.Employees.Count);
+            var timer = new Stopwatch();
+            timer.Start();
 
-                foreach (var department in departments)
+            var departments = db.Departments
+                .Where(d => d.Employees.Count > 5)
+                .OrderBy(d => d.Employees.Count)
+                .Select(d => new
                 {
-                    Console.WriteLine($"{department.Name} {department.Employee.FirstName}");
+                    Name = d.Name,
+                    Manager = d.Employee.FirstName,
+                    DepEmployees = d.Employees
+                });
 
-                    var employees = department.Employees;
-                    foreach (var employee in employees)
-                    {
-                        Console.WriteLine($"{employee.FirstName} {employee.LastName} {employee.JobTitle}");
-                    }
+            foreach (var department in departments)
+            {
+                Console.WriteLine($"{department.Name} {department.Manager}");
+
+                var employees = department.DepEmployees;
+                foreach (var employee in employees)
+                {
+                    Console.WriteLine($"{employee.FirstName} {employee.LastName} {employee.JobTitle}");
                 }
             }
         }
