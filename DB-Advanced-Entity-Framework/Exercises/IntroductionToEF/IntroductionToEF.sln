@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11FindLatestProjects", "11F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.IncreaseSalaries", "12.IncreaseSalaries\12.IncreaseSalaries.csproj", "{1F97AF91-3BF7-48E4-BA53-E4F25DA4D19C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.RemoveTowns", "13.RemoveTowns\13.RemoveTowns.csproj", "{D76336B0-8C11-4D0A-8DCF-C3BF7B88A8FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{1F97AF91-3BF7-48E4-BA53-E4F25DA4D19C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F97AF91-3BF7-48E4-BA53-E4F25DA4D19C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F97AF91-3BF7-48E4-BA53-E4F25DA4D19C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D76336B0-8C11-4D0A-8DCF-C3BF7B88A8FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D76336B0-8C11-4D0A-8DCF-C3BF7B88A8FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D76336B0-8C11-4D0A-8DCF-C3BF7B88A8FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D76336B0-8C11-4D0A-8DCF-C3BF7B88A8FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
