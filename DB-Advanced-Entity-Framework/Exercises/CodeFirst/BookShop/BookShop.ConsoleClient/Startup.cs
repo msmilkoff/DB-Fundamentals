@@ -5,7 +5,6 @@
     using System.Linq;
     using Data;
     using Data.Migrations;
-    using Models;
 
     public class Startup
     {
@@ -17,11 +16,7 @@
 
             using (db)
             {
-                PrintBooksAfter2000(db);
-                PrintAuthorsWhoReleasedBookBefore1990(db);
-                PrintAuthorsByNumberOfBooks(db);
-                PrintBooksByGeorgePowell(db);
-                PrintMostRecentBooksByCategory(db);
+                
             }
         }
 

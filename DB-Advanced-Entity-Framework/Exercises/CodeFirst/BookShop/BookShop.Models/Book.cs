@@ -7,10 +7,12 @@
     public class Book
     {
         private ICollection<Category> categories;
+        private ICollection<Book> relatedBooks;
 
         public Book()
         {
             this.categories = new HashSet<Category>();
+            this.relatedBooks = new HashSet<Book>();
         }
 
         public int Id { get; set; }
@@ -41,6 +43,12 @@
         {
             get { return this.categories; }
             set { this.categories = value; }
+        }
+
+        public virtual ICollection<Book> RelatedBooks
+        {
+            get { return this.relatedBooks; }
+            set { this.relatedBooks = value; }
         }
     }
 }
