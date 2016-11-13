@@ -1,7 +1,6 @@
 ﻿namespace StudentSystem.ConsoleClient
 {
     using Data;
-    using Models;
 
     public class Startup
     {
