@@ -5,6 +5,7 @@
     using System.Linq;
     using Data;
     using Data.Migrations;
+    using Models;
 
     public class Startup
     {
@@ -16,9 +17,52 @@
 
             using (db)
             {
-                
             }
         }
+
+        private static void PrintNotReleasedBooks(BookShopContext db)
+        {
+            int year = int.Parse(Console.ReadLine());
+            var bookTitles = db.Books
+                .Where(b => b.ReleaseDate.Value.Year != year)
+                .Select(b => b.Title);
+
+            foreach (var title in bookTitles)
+            {
+                Console.WriteLine(title);
+            }
+        }
+
+        private static void PrintBooksByPrice(BookShopContext db)
+        {
+            var books = db.Books.
+                Where(b => b.Price < 5 || b.Price > 40)
+                .Select(b => new
+                {
+                    Title = b.Title,
+                    Price = b.Price
+                });
+
+            foreach (var book in books)
+            {
+                Console.WriteLine($"{book.Title} {book.Price}");
+            }
+        }
+
+        private static void PrintGoldenBooks(BookShopContext db)
+        {
+            var bookTitles = db.Books
+                .Where(b => b.Edition == EditionType.Gold
+                    && b.Copies < 5000)
+                .Select(b => b.Title);
+
+            foreach (var title in bookTitles)
+            {
+                Console.WriteLine(title);
+            }
+        }
+
+        /* Problems from "Relations" Exercice */
 
         private static void PrintMostRecentBooksByCategory(BookShopContext db)
         {
